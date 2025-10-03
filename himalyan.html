@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Himalayan River Adventure</title>
   
-  <meta name="description" content="Book the best adventure activities in Rishikesh: River Rafting, Luxury Camping, Bungee Jumping, Scooter Rentals, and more. Contact us via WhatsApp!">
+  <meta name="description" content="Book the best adventure activities in Rishikesh: River Rafting, Luxury Camping, Bungee Jumping, Scooter Rentals, and more. Contact us via WhatsApp!">
   
   <style>
-    /* Sabhi CSS ab yahan hai */
     :root {
       --primary: #1b3550;
       --secondary: #2f7b8a;
@@ -19,13 +18,11 @@
     * { box-sizing:border-box; margin:0; padding:0; }
     body { font-family: Arial, sans-serif; color: var(--dark-text); background:#fff; }
 
-    /* Header */
     header { position:sticky; top:0; background:#fff; display:flex; justify-content:space-between; align-items:center; padding:16px 32px; box-shadow:0 2px 6px rgba(0,0,0,0.1); z-index:1000; }
     .logo { font-size:22px; font-weight:bold; color:var(--primary); }
     nav a { margin-left:24px; text-decoration:none; color:var(--primary); font-weight:600; transition:0.3s; }
     nav a:hover { color:var(--accent); }
 
-    /* Hero */
     .hero { position:relative; height:500px; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; }
     .hero::before { content:""; position:absolute; inset:0; background: rgba(0,0,0,0.4); }
     .hero .content { position:relative; z-index:2; text-align:center; color:#fff; padding:0 20px; }
@@ -34,7 +31,6 @@
     .btn { background:var(--accent); color:#fff; padding:14px 28px; border-radius:6px; text-decoration:none; font-size:16px; transition:0.3s; }
     .btn:hover { background:var(--primary); }
 
-    /* Sections */
     main { max-width:1100px; margin:40px auto; padding:0 20px; }
     .section { margin-bottom:60px; }
     .section-title { font-size:28px; color:var(--secondary); text-align:center; margin-bottom:24px; position:relative; }
@@ -44,7 +40,6 @@
     .package ul { list-style:disc inside; text-align:left; display:inline-block; margin-top:12px; }
     .package img { width:100%; max-width:600px; border-radius:10px; margin-bottom:16px; }
 
-    /* Booking */
     .booking { background:var(--light-bg); padding:30px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,0.06); max-width:600px; margin:0 auto; }
     .booking h2 { text-align:center; color:var(--secondary); margin-bottom:20px; }
     .booking form { display:grid; gap:14px; }
@@ -52,312 +47,6 @@
     .booking button { background:var(--secondary); color:#fff; padding:14px; border:none; border-radius:6px; font-size:16px; cursor:pointer; transition:0.3s; }
     .booking button:hover { background:var(--primary); }
 
-    /* Footer */
     footer { background:var(--light-bg); padding:20px; text-align:center; font-size:14px; color:var(--primary); }
 
-    /* Responsive */
     @media (max-width:768px) {
-      .hero h1 { font-size:32px; }
-      .hero p { font-size:16px; }
-      nav { display:none; }
-      .package ul { text-align:left; }
-    }
-    
-    /* --- NEW HOTEL SLIDER STYLES --- */
-    /* NOTE: Fade animation is defined below */
-    .hotel-slider-container {
-        max-width: 700px; /* Slider width */
-        position: relative;
-        margin: 0px auto 20px;
-    }
-
-    .slider-box-hotel {
-        position: relative;
-        border: 4px solid var(--accent); /* Accent color border */
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    /* Hide the slides by default */
-    .hotelSlides {
-      display: none;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    /* Image settings */
-    .hotelSlides img {
-        width: 100%;
-        height: 380px; /* Photo height */
-        object-fit: cover;
-    }
-
-    /* Next & previous buttons for Hotel */
-    .prev-hotel, .next-hotel {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 12px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      transition: 0.6s ease;
-      user-select: none;
-      background-color: rgba(26, 53, 80, 0.6); /* Primary color dark */
-      border-radius: 4px;
-    }
-
-    /* Position the "next button" to the right */
-    .next-hotel {
-      right: 10px;
-    }
-    .prev-hotel {
-      left: 10px;
-    }
-
-    .prev-hotel:hover, .next-hotel:hover {
-      background-color: var(--secondary);
-    }
-    
-    /* Caption text */
-    .text {
-      color: #fff;
-      font-size: 16px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      background-color: rgba(0,0,0,0.5);
-    }
-
-    /* The dots/bullets/indicators */
-    .dot-hotel {
-      cursor: pointer;
-      height: 12px;
-      width: 12px;
-      margin: 0 4px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-
-    /* Active dot */
-    .active-hotel, .dot-hotel:hover {
-      background-color: var(--accent); /* Accent color on active/hover */
-    }
-    
-    .hotel-desc {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 16px;
-        color: var(--primary);
-    }
-    
-    /* Fade Animation for Slides */
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="logo">Himalayan River Adventure</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#activities">Activities</a>
-      <a href="#hotel">Hotel Booking</a>
-      <a href="#booking">Booking</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section id="home" class="hero" style="background-image:url(file:///C:/Users/LENOVO/Downloads/laxman%20jhula-rishikesh-uttrakhand-hero.jpg)">
-    <div class="content">
-      <h1>Discover Rishikesh Adventures</h1>
-
-      <p>Rafting, Camping, Bungee & More</p>
-      <a href="#activities" class="btn">Explore Activities</a>
-    </div>
-  </section>
-
-  <main>
-    <section id="activities" class="section">
-      <div class="section-title">Activities</div>
-
-      <div class="package">
-        <img src="file:///C:/Users/LENOVO/Downloads/Thrill-Thirsty-rafting-1024x683.jpg" alt="Rafting">
-        <h3>Rafting</h3>
-        <p>Exciting river rafting at Brahampuri, Shivpuri & Marine Drive</p>
-      </div>
-
-      <div class="package">
-        <img src="file:///C:/Users/LENOVO/Downloads/slide3.jpg" alt="Camping">
-        <h3>Camping</h3>
-        <p>Luxury riverside camping with bonfire & adventure games</p>
-      </div>
-
-      <div class="package">
-        <img src="file:///C:/Users/LENOVO/Downloads/jumpin-heights-bungee-jumping-rishikesh-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Bungee">
-        <h3>Bungee Jumping</h3>
-        <p>Thrilling jumps: Beginner 55m, Adventure 83m, Extreme 107m</p>
-      </div>
-
-      <div class="package">
-        <img src="file:///C:/Users/LENOVO/Downloads/scooty-rental.webp" alt="Scooter">
-        <h3>Scooter Rent</h3>
-        <p>Rent scooters to explore Rishikesh at your own pace</p>
-      </div>
-
-      <div class="package">
-        <img src="file:///C:/Users/LENOVO/Downloads/banner-chila-jungle-safari.jpg" alt="Jungle Safari">
-        <h3>Jungle Safari</h3>
-        <p>Adventure safari in nearby forests with expert guides</p>
-      </div>
-
-      <div class="package">
-        <img src="file:///C:/Users/LENOVO/Downloads/hq720.jpg" alt="Taxi">
-        <h3>Taxi Booking</h3>
-        <p>Reliable taxi services for local sightseeing and travel</p>
-      </div>
-    </section>
-
-   
-
-    <section id="hotel" class="section">
-      <div class="section-title">Hotel Booking</div>
-      
-      <div class="hotel-slider-container">
-        <div class="slider-box-hotel">
-            
-            <div class="hotelSlides fade">
-                <img src="file:///C:/Users/LENOVO/Desktop/WhatsApp%20Image%202025-10-01%20at%2018.36.48_0eb216c1.jpg" alt="Hotel Interior View">
-   
-            </div>
-
-            <div class="hotelSlides fade">
-                <img src="file:///C:/Users/LENOVO/Desktop/WhatsApp%20Image%202025-10-01%20at%2018.36.49_d3f9f473.jpg" alt="Hotel Riverside Balcony">
-            
-            </div>
-
-            <div class="hotelSlides fade">
-                <img src="file:///C:/Users/LENOVO/Desktop/WhatsApp%20Image%202025-10-01%20at%2018.36.44_b1e84be2.jpg" alt="Hotel Pool Area">
-            </div>
-			 
-			 <div class="hotelSlides fade">
-                <img src="file:///C:/Users/LENOVO/Desktop/WhatsApp%20Image%202025-10-01%20at%2018.36.45_875d39c9.jpg" alt="Hotel Pool Area">
-            </div>
-			 <div class="hotelSlides fade">
-                <img src="file:///C:/Users/LENOVO/Desktop/WhatsApp%20Image%202025-10-01%20at%2018.36.46_4a349d91.jpg" alt="Hotel Pool Area">
-            </div>
-            <a class="prev-hotel" onclick="plusHotelSlides(-1)">&#10094;</a>
-            <a class="next-hotel" onclick="plusHotelSlides(1)">&#10095;</a>
-        </div>
-        
-        <div style="text-align:center; margin-top: 10px;">
-            <span class="dot-hotel" onclick="currentHotelSlide(1)"></span> 
-            <span class="dot-hotel" onclick="currentHotelSlide(2)"></span> 
-            <span class="dot-hotel" onclick="currentHotelSlide(3)"></span> 
-			<span class="dot-hotel" onclick="currentHotelSlide(4)"></span> 
-            <span class="dot-hotel" onclick="currentHotelSlide(5)"></span> 
-        
-  
-        </div>
-
-        <p class="hotel-desc">Comfortable hotel accommodations near all adventure locations with scenic views and premium services.</p>
-      </div>
-    </section>
-
-    <section id="booking" class="section">
-      <div class="section-title">Book Your Adventure</div>
-      
-  <h2>Book Your Adventure via WhatsApp</h2>
-  <p style="text-align:center; margin-bottom: 20px;">Fill the form below and click the button to send your details to us on WhatsApp!</p>
-  
-  <div id="bookingForm" style="display:grid; gap:14px; max-width:600px; margin:0 auto;">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-    <select id="service" required>
-      <option value="">Select Service</option>
-      <option value="Rafting">Rafting</option>
-      <option value="Camping">Camping</option>
-      <option value="Bungee Jumping">Bungee Jumping</option>
-      <option value="Scooter Rent">Scooter Rent</option>
-      <option value="Jungle Safari">Jungle Safari</option>
-      <option value="Taxi Booking">Taxi Booking</option>
-      <option value="Hotel Booking">Hotel Booking</option>
-    </select>
-    <textarea rows="4" id="details" placeholder="Additional Details"></textarea>
-    
-    <button type="button" class="whatsapp-btn" onclick="sendWhatsAppBooking()">
-      Book Now on WhatsApp
-    </button>
-  </div>
-</div>
-  </main>
-
-  <footer id="contact">
-    <p>📞 Contact: 6396334257, 7351598633</p>
-    <p>© Himalayan River Adventure Travel Agency</p>
-  </footer>
-
-  <script>
-        let hotelSlideIndex = 0;
-        let autoHotelSlideTimer;
-        showHotelSlides();
-
-        // Next/previous control
-        function plusHotelSlides(n) {
-          hotelSlideIndex += n;
-          showHotelSlides();
-          clearTimeout(autoHotelSlideTimer);
-          autoHotelSlideTimer = setTimeout(showHotelSlides, 4000); // 4 seconds auto-play restart
-        }
-
-        // Dot control
-        function currentHotelSlide(n) {
-          hotelSlideIndex = n - 1;
-          showHotelSlides();
-          clearTimeout(autoHotelSlideTimer);
-          autoHotelSlideTimer = setTimeout(showHotelSlides, 4000); 
-        }
-
-        // Main function to display the slides
-        function showHotelSlides() {
-          let i;
-          let slides = document.getElementsByClassName("hotelSlides");
-          let dots = document.getElementsByClassName("dot-hotel");
-
-          if (hotelSlideIndex >= slides.length) {hotelSlideIndex = 0}    
-          if (hotelSlideIndex < 0) {hotelSlideIndex = slides.length - 1}
-
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active-hotel", "");
-          }
-          
-          slides[hotelSlideIndex].style.display = "block";  
-          dots[hotelSlideIndex].className += " active-hotel";
-          
-          hotelSlideIndex++;
-          
-          // Auto-play after 4 seconds
-          autoHotelSlideTimer = setTimeout(showHotelSlides, 4000); 
-        }
-    </script>
-
-</body>
-</html>
